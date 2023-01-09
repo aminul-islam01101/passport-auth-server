@@ -27,6 +27,7 @@
         "no-unused-vars": "warn",
         "import/newline-after-import": ["warn", { "count": 1 }],
         "no-underscore-dangle":"off",
+        "consistent-return":"off",
 
         "prettier/prettier": [
             "warn",

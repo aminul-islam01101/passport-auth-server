@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const passport = require('passport');
 const routes = require('./routes/routes');
 require('dotenv').config();
 
@@ -8,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(passport.initialize());
+require('./configs/passport');
 
 // api route baseCamp
 app.use('/', routes);
